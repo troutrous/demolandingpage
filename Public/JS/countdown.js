@@ -1,7 +1,6 @@
-window.onload = () => {
+window.addEventListener('DOMContentLoaded', () => {
   const countdown = new Countdown();
-}
-
+});
 function Countdown() {
   this.intervalGetValue();
 };
@@ -25,10 +24,10 @@ Countdown.prototype.intervalGetValue = () => {
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    if(document.getElementById('days').innerHTML != days) document.getElementById('days').innerHTML = (days < 10 ? '0' : '') + days;
-    if(document.getElementById('hours').innerHTML != hours) document.getElementById('hours').innerHTML = (hours < 10 ? '0' : '') + hours;
-    if(document.getElementById('minutes').innerHTML != minutes) document.getElementById('minutes').innerHTML = (minutes < 10 ? '0' : '') + minutes;
-    if(document.getElementById('seconds').innerHTML != seconds) document.getElementById('seconds').innerHTML = (seconds < 10 ? '0' : '') + seconds;
+    if (document.getElementById('days').innerHTML != days) document.getElementById('days').innerHTML = (days < 10 ? '0' : '') + days;
+    if (document.getElementById('hours').innerHTML != hours) document.getElementById('hours').innerHTML = (hours < 10 ? '0' : '') + hours;
+    if (document.getElementById('minutes').innerHTML != minutes) document.getElementById('minutes').innerHTML = (minutes < 10 ? '0' : '') + minutes;
+    if (document.getElementById('seconds').innerHTML != seconds) document.getElementById('seconds').innerHTML = (seconds < 10 ? '0' : '') + seconds;
 
     // If the count down is finished, write some text
     if (distance < 0) {
